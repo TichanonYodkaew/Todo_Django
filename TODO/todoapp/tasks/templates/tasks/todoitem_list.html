@@ -1,0 +1,16 @@
+<a href="/todo/create"><h1>Create</h1></a>
+{% block content%}
+{% for task in object_list %}
+<p>#########################################################################################</p>
+
+<h2>Title : {{task.title}}</h2>
+<h3>Description : {{task.description}}</h3>
+<h3 style="color:Teal">Deadline : {{task.deadline}}</h3>
+<h3 style="color:red">Finished : {{task.task_finished}}</h3>
+<h3 style="color:Green">Category : {{task.category}}</h3></br>
+<a href="/todo/update/{{ task.id }}">Update</a></br></br>
+<a href="/todo/delete/{{ task.id }}">Delete</a>
+
+<p>#########################################################################################</p>
+{% endfor %}
+{% endblock %}

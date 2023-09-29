@@ -1,0 +1,11 @@
+{% block content %}
+<h2>To Do</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+
+<a href="/todo/list"><h1>List To Do</h1></a>

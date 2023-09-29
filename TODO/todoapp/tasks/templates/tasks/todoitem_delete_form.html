@@ -1,0 +1,11 @@
+{% block content %}
+<h2>Delete To Do</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Do you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+<a href="/todo/list"><h1>Back to List To Do</h1></a>
+{% endblock %}
